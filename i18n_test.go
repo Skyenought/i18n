@@ -27,6 +27,9 @@ package i18n
 
 import (
 	"context"
+	"net/http"
+	"testing"
+
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/common/config"
 	"github.com/cloudwego/hertz/pkg/common/ut"
@@ -34,8 +37,6 @@ import (
 	"github.com/cloudwego/hertz/pkg/route"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
-	"net/http"
-	"testing"
 )
 
 func newServer() *route.Engine {
@@ -101,6 +102,7 @@ func TestI18nEN(t *testing.T) {
 		})
 	}
 }
+
 func TestI18nZH(t *testing.T) {
 	type args struct {
 		lng  language.Tag

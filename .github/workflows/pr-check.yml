@@ -17,7 +17,7 @@ jobs:
         uses: crate-ci/typos@master
 
   staticcheck:
-    runs-on: [ self-hosted, X64 ]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 

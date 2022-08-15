@@ -29,6 +29,9 @@ import (
 	"context"
 	"embed"
 	"encoding/json"
+	"net/http"
+	"testing"
+
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/common/config"
 	"github.com/cloudwego/hertz/pkg/common/ut"
@@ -36,8 +39,6 @@ import (
 	"github.com/cloudwego/hertz/pkg/route"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
-	"net/http"
-	"testing"
 )
 
 func newEmbedServer(middleware ...app.HandlerFunc) *route.Engine {
